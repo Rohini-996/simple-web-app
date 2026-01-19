@@ -25,7 +25,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: "dockerhubcreds",
+                    credentialsId: "DockerCreds",
                     usernameVariable: "DOCKER_USER",
                     passwordVariable: "dockerPass"
                 )]) {
